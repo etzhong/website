@@ -1,38 +1,67 @@
-# Portfolio Starter Kit
+![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
 
-This portfolio is built with **Next.js** and a library called [Nextra](https://nextra.vercel.app/). It allows you to write Markdown and focus on the _content_ of your portfolio. This starter includes:
+# Minimalist CV [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
 
-- Automatically configured to handle Markdown/MDX
-- Generates an RSS feed based on your posts
-- A beautiful theme included out of the box
-- Easily categorize posts with tags
-- Fast, optimized web font loading
+Simple web app that renders minimalist CV with print-friendly layout.
 
-https://demo.vercel.blog
+Built with Next.js and shadcn/ui, deployed on Vercel.
 
-## Configuration
+# Features
 
-1. Update your name in `theme.config.js` or change the footer.
-1. Update your name and site URL for the RSS feed in `scripts/gen-rss.js`.
-1. Update the meta tags in `pages/_document.tsx`.
-1. Update the posts inside `pages/posts/*.md` with your own content.
+- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
+- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
+- Auto generated Layout
+- Responsive for different devices
+- Optimized for Next.js and Vercel
 
-## Deploy your own
+# Getting Started Locally
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog)
+1. Clone this repository to your local machine:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog&project-name=portfolio&repository-name=portfolio)
+   ```bash
+   git clone https://github.com/BartoszJarocki/cv.git
+   ```
 
-## How to use
+2. Move to the cloned directory
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+   ```bash
+   cd cv
+   ```
 
-```bash
-npx create-next-app --example blog my-blog
-# or
-yarn create next-app --example blog my-blog
-# or
-pnpm create next-app --example blog my-blog
+3. Install dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+4. Start the local Server:
+
+   ```bash
+   yarn dev
+   ```
+
+5. Open the [Config file](./src/data/resume-data.tsx) and make changes
+
+# Run with Docker
+
+Build the container
+
+```
+docker compose build
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Run the container
+
+```
+docker compose up -d
+```
+
+Stop the Container
+
+```
+docker compose down 
+```
+
+# License
+
+[MIT](https://choosealicense.com/licenses/mit/)
