@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   about:
     "CECS + EE Presidential Scholar at USC",
   summary:
-    "Hi! My name is Eric I'm a 3rd-year Presidential Scholar at USC concurrently studying towards a master’s in electrical engineering and a bachelor’s in computer engineering & computer science. I love to learn and build, two things you'll find common in most of what I've done. I'm passionate about all things computers—particularly computer architecture, low-level software/systems, and high-performance computing. In my free time, you can find me reading/writing, playing poker, or going down some random internet rabbit hole. Please feel free to reach out if you'd like to get in touch. Thanks for stopping by!",
+    "Hi I'm Eric! I'm a 3rd-year Presidential Scholar at USC concurrently studying towards a master’s in electrical engineering and a bachelor’s in computer engineering & computer science. I love to learn and build, two things you'll find common in most of what I've done. I'm passionate about all things computers—particularly computer architecture, low-level software/systems, and high-performance computing. In my free time, you can find me reading/writing, playing poker, or going down some random internet rabbit hole. Please feel free to reach out if you'd like to get in touch. Thanks for stopping by!",
   avatarUrl: "https://media.licdn.com/dms/image/D5603AQFYfrlycEQ0XQ/profile-displayphoto-shrink_400_400/0/1695108300674?e=1711584000&v=beta&t=3eSoJNwL_axGymSIbqxwFL2QL0ZSw5LyKe9YGQBmla8",
   personalWebsiteUrl: "https://www.erictzhong.com",
   contact: {
