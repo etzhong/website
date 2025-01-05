@@ -26,13 +26,13 @@ export default function Home() {
           className="rounded-full cursor-pointer hover:grayscale mb-5"
           priority
         />
-        <h1 className="text-2xl font-bold">Hey, I'm Eric!</h1>
+        <h1 className="text-2xl font-bold">Hey, I&apos;m Eric!</h1>
 
         <div className="text-gray-700 dark:text-gray-300">
           <p className="mt-4">
-            I’m an engineer, developer, and part-time creative finishing up
-            their senior year in Electrical & Computer Engineering + Computer
-            Science at the University of Southern California (
+            I&apos;m an engineer, developer, and part-time creative finishing
+            up their senior year in Electrical & Computer Engineering +
+            Computer Science at the University of Southern California (
             <a
               href="https://viterbischool.usc.edu"
               target="_blank"
@@ -47,13 +47,13 @@ export default function Home() {
             Born and raised in the Philly suburbs (Go Birds!), I originally
             ventured out to the City of Angels to become a physicist before
             rediscovering a love for computers and technology. In particular,
-            I'm fascinated by low-level systems and computer hardware design.
-            Hoping to learn the magic of making electrons dance usefully
-            on a rock, a computer engineering lackey was born.
+            I&apos;m fascinated by low-level systems and computer hardware
+            design. Hoping to learn the magic of making electrons dance
+            usefully on a rock, a computer engineering lackey was born.
           </p>
 
           <p className="mt-4 mb-4">
-            In the past couple years I've worked in a variety of areas,
+            In the past couple years I&apos;ve worked in a variety of areas,
             including&nbsp;
             <a
                 href="https://www.nvidia.com/en-us"
@@ -77,9 +77,9 @@ export default function Home() {
             >
               startup development
             </a>
-            . Currently I'm interested in leveraging hardware acceleration and
-            high performance computing towards solving unique problems, along
-            with investigating more modern ways of developing hardware. 
+            . Currently I&apos;m interested in leveraging hardware acceleration
+            and high performance computing towards solving unique problems,
+            along with investigating more modern ways of developing hardware.
           </p>
           
           <p className="mt-4 mb-4">
