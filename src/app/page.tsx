@@ -1,202 +1,120 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CommandMenu } from "@/components/command-menu";
-import { Metadata } from "next";
-import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
+import Image from "next/image";
+import { SOCIALS } from "../data/socials";
+import { SocialLink } from "@/components/social-link";
+import { allBlogs } from "contentlayer/generated";
+import { BlogCard } from "@/components/blog-card";
+import React from "react";
+import { LINKS } from "@/lib/constants";
+import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
-};
+export default function Home() {
+  const blogs = allBlogs.slice(0, 2).sort((a, b) => {
+    if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
+      return -1;
+    }
+    return 1;
+  });
 
-export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
-        <div className="flex items-center justify-between">
-          <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-              {RESUME_DATA.about}
-            </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
-              <a
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={RESUME_DATA.locationLink}
-                target="_blank"
-              >
-                <GlobeIcon className="size-3" />
-                {RESUME_DATA.location}
-              </a>
-            </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-              {RESUME_DATA.contact.email ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
-              {/* {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null} */}
-              {RESUME_DATA.contact.social.map((social) => (
-                <Button
-                  key={social.name}
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={social.url}>
-                    <social.icon className="size-4" />
-                  </a>
-                </Button>
-              ))}
-            </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
-              {RESUME_DATA.contact.email ? (
-                <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                  <span className="underline">{RESUME_DATA.contact.email}</span>
-                </a>
-              ) : null}
-              {/* {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
-                </a>
-              ) : null} */}
-            </div>
-          </div>
+    <React.Fragment>
+      <section className="mb-5">
+        <Image
+          src="/_static/headshot.jpg"
+          width={100}
+          height={100}
+          alt="avatar"
+          className="rounded-full cursor-pointer hover:grayscale mb-5"
+          priority
+        />
+        <h1 className="text-2xl font-bold">Hey, I'm Eric!</h1>
 
-          <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-          </Avatar>
-        </div>
-        <Section>
-          <h2 className="text-xl font-bold">About</h2>
-          <p className="text-pretty font-mono text-sm text-muted-foreground">
-            {RESUME_DATA.summary}
+        <div className="text-gray-700 dark:text-gray-300">
+          <p className="mt-4">
+            I’m an engineer, developer, and part-time creative finishing up
+            their senior year in Electrical & Computer Engineering + Computer
+            Science at the University of Southern California (
+            <a
+              href="https://viterbischool.usc.edu"
+              target="_blank"
+              className="border-b inline-block"
+            >
+            USC
+            </a>
+            ).
           </p>
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
-              </Card>
-            );
-          })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
-            return (
-              <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
 
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
-                    </div>
-                  </div>
+          <p className="mt-4">
+            Born and raised in the Philly suburbs (Go Birds!), I originally
+            ventured out to the City of Angels to become a physicist before
+            rediscovering a love for computers and technology. In particular,
+            I'm fascinated by low-level systems and computer hardware design.
+            Hoping to learn the magic of making electrons dance usefully
+            on a rock, a computer engineering lackey was born.
+          </p>
 
-                  <h4 className="font-mono text-sm leading-none">
-                    {work.title}
-                  </h4>
-                </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {work.description}
-                </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Interests</h2>
-          <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
-            })}
-          </div>
-        </Section>
+          <p className="mt-4 mb-4">
+            In the past couple years I've worked in a variety of areas,
+            including&nbsp;
+            <a
+                href="https://www.nvidia.com/en-us"
+                target="_blank"
+                className="border-b inline-block"
+            >
+              industry hardware engineering,
+            </a>
+            <a
+                href="https://arxiv.org/abs/2401.18050"
+                target="_blank"
+                className="border-b inline-block"
+            >
+              photonic computing research,
+            </a>
+            &nbsp;and&nbsp;
+            <a
+                href="https://usclavalab.org"
+                target="_blank"
+                className="border-b inline-block"
+            >
+              startup development
+            </a>
+            . Currently I'm interested in leveraging hardware acceleration and
+            high performance computing towards solving unique problems, along
+            with investigating more modern ways of developing hardware. 
+          </p>
+          
+          <p className="mt-4 mb-4">
+            Outside of engineering, you can find me reading & writing, playing
+            Poker, learning about entreprenuership, or cafe hopping around LA.
+          </p>
 
-        <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects + Involvements</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.projects.map((project) => {
-              return (
-                <ProjectCard
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
-                />
-              );
-            })}
-          </div>
-        </Section>
+          <p className="mb-4">
+            If you&apos;d like to get in touch, feel free&nbsp;
+            <a
+              href="mailto:eric@erictzhong.com"
+              className="border-b inline-block"
+            >
+              shoot me an email
+            </a>
+            &nbsp;or reach out on any of my socials. Cheers!
+          </p>
+        </div>
+
+        <div className="flex space-x-4 mb-2 mt-4">
+          {SOCIALS.map((social) => (
+            <SocialLink
+              key={social.label}
+              aria-label={`Follow on ${social.label}`}
+              href={social.href}
+              icon={social.icon}
+            />
+          ))}
+        </div>
+        <p className="mt-4 border-b inline-block cursor-pointer">
+          <a href={LINKS.RESUME} target="_blank" rel="noopener noreferrer">
+            View Resume
+          </a>
+        </p>
       </section>
-
-      <CommandMenu
-        links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-            url: socialMediaLink.url,
-            title: socialMediaLink.name,
-          })),
-        ]}
-      />
-    </main>
+    </React.Fragment>
   );
 }
