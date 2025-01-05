@@ -1,40 +1,66 @@
-# adarsha.dev
 
-This is my personal website and blog built using:
 
-- Framework : [Next.js](https://nextjs.org/)
-- Styling : [Tailwind CSS](https://tailwindcss.com/)
-- Markdown : [MDX](https://mdxjs.com/) and [Contentlayer](https://contentlayer.dev/)
-- Deployment: [Vercel](https://vercel.com/)
+# Minimalist CV 
+Simple web app that renders minimalist CV with print-friendly layout.
 
-## Running Locally
+Built with Next.js and shadcn/ui, deployed on Vercel.
 
-This application requires Node.js v16.13+.
+# Features
 
-```bash
-git clone https://github.com/adarshaacharya/adarsha.dev
-cd adarsha.dev
-pnpm install
-pnpm dev
+- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
+- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
+- Auto generated Layout
+- Responsive for different devices
+- Optimized for Next.js and Vercel
+
+# Getting Started Locally
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/BartoszJarocki/cv.git
+   ```
+
+2. Move to the cloned directory
+
+   ```bash
+   cd cv
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+4. Start the local Server:
+
+   ```bash
+   yarn dev
+   ```
+
+5. Open the [Config file](./src/data/resume-data.tsx) and make changes
+
+# Run with Docker
+
+Build the container
+
+```
+docker compose build
 ```
 
-## Templating Project
+Run the container
 
-If you want to use this project code as your own portfolio , you can go ahead. Please give me credit by mentioning original repo link somewhere in README.
+```
+docker compose up -d
+```
 
-**Note**: The source for this site was not created to be a template or theme, but for my own use so it may not fit your needs. Feel free to tweak as per your need.
+Stop the Container
 
-## Author
+```
+docker compose down 
+```
 
-- Website: https://adarsha.dev/
-- X: [@adarsha_ach](https://x.com/adarsha_ach)
-- Github: [@adarshaacharya](https://github.com/adarshaacharya)
-- LinkedIn: [@adarshaacharya](https://linkedin.com/in/adarshaacharya)
+# License
 
-Give a ⭐️ if you like the project!
-
-## License
-
-Copyright © 2020 [Adarsha Acharya](https://github.com/adarshaacharya).<br />
-
-This project is [MIT](https://github.com/adarshaacharya/adarsha.dev/blob/master/LICENSE) licensed.
+[MIT](https://choosealicense.com/licenses/mit/)
