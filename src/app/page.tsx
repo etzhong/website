@@ -70,7 +70,7 @@ export default function Home() {
             >
               photonic computing research
             </a>
-            ,&nbsp;and&nbsp;
+            , and&nbsp;
             <a
                 href="https://usclavalab.org"
                 target="_blank"
