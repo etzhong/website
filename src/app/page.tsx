@@ -53,8 +53,8 @@ export default function Home() {
           </p>
 
           <p className="mt-4 mb-4">
-            In the past couple years I&apos;ve worked in a variety of areas,
-            including&nbsp;
+            In the past couple years I&apos;ve worked in a variety of
+            areas, including&nbsp;
             <a
                 href="https://www.nvidia.com/en-us"
                 target="_blank"
@@ -62,6 +62,7 @@ export default function Home() {
             >
               industry hardware engineering,
             </a>
+            &nbsp;
             <a
                 href="https://arxiv.org/abs/2401.18050"
                 target="_blank"
@@ -79,7 +80,7 @@ export default function Home() {
             </a>
             . Currently I&apos;m interested in leveraging hardware acceleration
             and high performance computing towards solving unique problems,
-            along with learning more about agile hardware/software codesign.
+            along with learning more about agile hardware/software co-design.
           </p>
           
           <p className="mt-4 mb-4">
