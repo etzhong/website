@@ -60,17 +60,17 @@ export default function Home() {
                 target="_blank"
                 className="border-b inline-block"
             >
-              industry hardware engineering,
+              industry hardware engineering
             </a>
-            &nbsp;
+            ,&nbsp;
             <a
                 href="https://arxiv.org/abs/2401.18050"
                 target="_blank"
                 className="border-b inline-block"
             >
-              photonic computing research,
+              photonic computing research
             </a>
-            &nbsp;and&nbsp;
+            ,&nbsp;and&nbsp;
             <a
                 href="https://usclavalab.org"
                 target="_blank"
