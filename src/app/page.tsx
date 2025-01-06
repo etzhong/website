@@ -78,7 +78,7 @@ export default function Home() {
               startup development
             </a>
             . Currently I&apos;m interested in leveraging hardware acceleration
-            and high performance computing towards solving uniquely problems,
+            and high performance computing towards solving unique problems,
             along with learning more about agile hardware/software codesign.
           </p>
           
