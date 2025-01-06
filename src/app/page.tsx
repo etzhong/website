@@ -47,9 +47,9 @@ export default function Home() {
             Born and raised in the Philly suburbs (Go Birds!), I originally
             ventured out to the City of Angels to become a physicist before
             rediscovering a love for computers and technology. In particular,
-            I&apos;m fascinated by low-level systems and computer hardware
-            design. Hoping to learn the magic of making electrons dance
-            usefully on a rock, a computer engineering lackey was born.
+            I was fascinated by low-level systems and computer hardware design.
+            Hoping to learn the magic of making electrons dance usefully on a
+            rock, a computer engineering lackey was born.
           </p>
 
           <p className="mt-4 mb-4">
@@ -78,13 +78,14 @@ export default function Home() {
               startup development
             </a>
             . Currently I&apos;m interested in leveraging hardware acceleration
-            and high performance computing towards solving unique problems,
-            along with investigating more modern ways of developing hardware.
+            and high performance computing towards solving uniquely problems,
+            along with learning more about agile hardware/software codesign.
           </p>
           
           <p className="mt-4 mb-4">
             Outside of engineering, you can find me reading & writing, playing
-            Poker, learning about entreprenuership, or cafe hopping around LA.
+            Poker, going down some internet rabbit hole, or trying out food
+            spots around LA.
           </p>
 
           <p className="mb-4">
