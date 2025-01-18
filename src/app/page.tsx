@@ -31,8 +31,8 @@ export default function Home() {
         <div className="text-gray-700 dark:text-gray-300">
           <p className="mt-4">
             I&apos;m an engineer, developer, and part-time creative finishing
-            up their senior year in Electrical & Computer Engineering +
-            Computer Science at the University of Southern California (
+            up their senior year in Electrical Engineering and Computer Science
+            at the University of Southern California (
             <a
               href="https://viterbischool.usc.edu"
               target="_blank"
