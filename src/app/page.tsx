@@ -48,8 +48,8 @@ export default function Home() {
             ventured out to the City of Angels to become a physicist before
             rediscovering a love for computers and technology. In particular,
             I was fascinated by low-level systems and computer hardware design.
-            Hoping to learn the magic of making electrons dance usefully on a
-            rock, a computer engineering lackey was born.
+            Hoping to learn the magic of making electrons efficiently dance on
+            a rock, a computer engineering lackey was born.
           </p>
 
           <p className="mt-4 mb-4">
@@ -60,7 +60,7 @@ export default function Home() {
                 target="_blank"
                 className="border-b inline-block"
             >
-              industry hardware engineering
+              GPU hardware engineering
             </a>
             ,&nbsp;
             <a
@@ -79,8 +79,9 @@ export default function Home() {
               startup development
             </a>
             . Currently I&apos;m interested in leveraging hardware acceleration
-            and high performance computing towards solving unique problems,
-            along with learning more about agile hardware/software co-design.
+            and high performance computing towards solving uniquely challenging
+            problems, along with learning more about agile hardware/software
+            co-design.
           </p>
           
           <p className="mt-4 mb-4">
