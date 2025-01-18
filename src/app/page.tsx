@@ -86,7 +86,7 @@ export default function Home() {
           
           <p className="mt-4 mb-4">
             Outside of engineering, you can find me reading & writing, playing
-            Poker, going down some internet rabbit hole, or trying out food
+            poker, going down some internet rabbit hole, or trying out food
             spots around LA.
           </p>
 
