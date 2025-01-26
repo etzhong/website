@@ -47,9 +47,9 @@ export default function Home() {
             Born and raised in the Philly suburbs (Go Birds!), I originally
             ventured out to the City of Angels to become a physicist before
             rediscovering a love for computers and technology. In particular,
-            I was fascinated by low-level systems and computer hardware design.
-            Hoping to learn the magic of making electrons efficiently dance on
-            a rock, a computer engineering lackey was born.
+            I was fascinated by low-level systems and hardware design. Hoping
+            to learn the magic of making electrons efficiently dance on a rock,
+            a computer engineering lackey was born.
           </p>
 
           <p className="mt-4 mb-4">

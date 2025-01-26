@@ -28,7 +28,7 @@ export function Header() {
 
   return (
     <header className="mb-10 tracking-tight mt-10">
-      <div className=" lg:sticky lg:top-20">
+      {/* <div className=" lg:sticky lg:top-20">
         <LayoutGroup>
           <nav
             className="fade relative scroll-pr-6  px-0 pb-0 md:relative md:overflow-auto"
@@ -72,7 +72,7 @@ export function Header() {
             </div>
           </nav>
         </LayoutGroup>
-      </div>
+      </div> */}
     </header>
   );
 }
