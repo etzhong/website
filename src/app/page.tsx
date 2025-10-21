@@ -39,8 +39,8 @@ export default function Home() {
             NVIDIA
             </a>
             &nbsp;in Santa Clara. Before that, I graduated concurrently with
-            my master&apos;s and bachelor&apos;s degrees in Electrical
-            Engineering and Computer Science from&nbsp;
+            my master&apos;s and bachelor&apos;s in Electrical Engineering and
+            Computer Science from&nbsp;
             <a href="https://viterbischool.usc.edu" target="_blank"
               className="border-b inline-block">
             USC
