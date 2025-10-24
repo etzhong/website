@@ -3,7 +3,7 @@ export default function Head() {
     <>
       <link
         rel="apple-touch-icon"
-        sizes="76x76"
+        sizes="100x100"
         href="/_static/favicons/apple-touch-icon.png"
       />
       <link
