@@ -13,7 +13,7 @@ export const SOCIALS = [
   },
   {
     label: "X",
-    href: "https://x.com/EricTZhong",
+    href: "https://x.com/etzhong",
     icon: XIcon,
   },
   {

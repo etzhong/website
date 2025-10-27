@@ -92,3 +92,7 @@ export const TOOLS = [
     techs: ["npm-package"],
   },
 ] as const;
+
+// Exported types derived from the `as const` data above so other modules can import them
+export type WebApp = (typeof WEB_APPS)[number];
+export type Tool = (typeof TOOLS)[number];

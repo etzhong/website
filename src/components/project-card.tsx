@@ -1,49 +1,96 @@
-import { GitHubIcon } from "@/components/icons";
-import { SocialLink } from "@/components/social-link";
-import { WEB_APPS } from "@/data/projects";
-import Image from "next/image";
+import { WebApp } from "@/data/projects";
+import { ZoomableImage } from "./zoomable-image";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 type Props = {
-  project: (typeof WEB_APPS)[number];
+  project: WebApp;
+  index: number;
 };
 
-export const ProjectCard = ({ project }: Props) => {
+export const ProjectCard = ({ project, index }: Props) => {
+  const isEven = index % 2 === 0;
+
   return (
-    <div
-      className="flex cursor-pointer flex-col rounded-xl transition hover:bg-zinc-50 hover:dark:bg-zinc-800/50"
-      key={project.title}
-    >
-      <Image
-        src={project.thumbnail}
-        alt={`Logo of ${project.title}`}
-        className="h-50 w-full rounded-t-lg object-cover bg-no-repeat"
-        width={0}
-        height={0}
-        unoptimized
-      />
-      <div className="p-4">
-        <a className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-          {project.title}
-        </a>
-        <div className=" z-10 mt-2 text-sm text-gray-500 dark:text-gray-400">
-          {project.description}
+    <div className="group">
+      <div
+        className={cn(
+          "flex flex-col lg:flex-row gap-8 lg:gap-12 items-center",
+          !isEven && "lg:flex-row-reverse",
+        )}
+      >
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2">
+          <div className="relative overflow-hidden rounded-lg">
+            <div className="aspect-video relative">
+              <ZoomableImage
+                src={project.thumbnail}
+                alt={`Screenshot of ${project.title}`}
+                width={800}
+                height={450}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+          </div>
         </div>
-        <div className="z-10 mb-6 mt-6 flex flex-wrap gap-1 ">
-          {project.tags.map((techStackItem) => (
-            <p
-              className="hover:text-primary dark:hover:text-primary inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs leading-4 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-200"
-              key={techStackItem}
-            >
-              {techStackItem}
+
+        {/* Content Section */}
+        <div className="w-full lg:w-1/2 space-y-5">
+          <div className="space-y-3">
+            <h3 className="text-2xl lg:text-3xl font-bold tracking-tight">
+              {project.title}
+            </h3>
+
+            <p className="text-muted-foreground leading-relaxed">
+              {project.description}
             </p>
-          ))}
-        </div>
-        <div className="flex items-center">
-          <SocialLink
-            icon={GitHubIcon}
-            href={project.repo}
-            className="h-6 w-6 flex-none"
-          />
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <Badge
+                key={tag}
+                variant="secondary"
+                className="text-xs px-2.5 py-0.5"
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+
+          <div className="flex gap-3 pt-1">
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <a
+                href={project.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Github className="h-4 w-4" />
+                Code
+              </a>
+            </Button>
+            {(project as any).demo && (
+              <Button size="sm" asChild className="transition-colors">
+                <a
+                  href={(project as any).demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Demo
+                </a>
+              </Button>
+            )}
+          </div>
         </div>
       </div>
     </div>
