@@ -22,7 +22,7 @@ export const CURRENTLY_READING: Book[] = [
     author: "Adrian Tchaikovsky",
     link: "https://www.goodreads.com/book/show/25499718-children-of-time",
     cover: "/books/children-of-time.jpg",
-    notes: "A gripping take on humanity's future in the stars amidst a dying Earth",
+    notes: "A gripping science-fiction take on a dwindling humanity's future among the stars after fleeing a dying Earth",
   }
 ];
 
@@ -49,14 +49,21 @@ export const FINISHED_READING: Book[] = [
     author: "Michel Dubois, Murali Annavaram, Per Stenström",
     link: "https://www.goodreads.com/book/show/40534545-ikigai",
     cover: "/books/pcoad.jpg",
-    notes: "My first comparch book. Great modern extension of Hennessey and Patterson"
+    notes: "My USC comparch professor's book. A great modern revision of Hennessey and Patterson"
   },
   {
     title: "The Three-Body Problem (trilogy)",
     author: "Cixin Liu",
     link: "https://www.goodreads.com/book/show/40534545-ikigai",
     cover: "/books/three-body-problem.jpg",
-    notes: "The most imaginative and existential science fiction series I've ever read"
+    notes: "One of the most imaginative and existential fiction series I've ever read. A must-read for anyone interested in science fiction"
+  },
+  {
+    title: "Getting Started with FPGAs",
+    author: "Russell Merrick",
+    link: "https://www.goodreads.com/en/book/show/119031481-getting-started-with-fpgas",
+    cover: "/books/getting-started-with-fpgas.jpg",
+    notes: "An amazing zero-to-one introduction into FPGAs and digital design "
   },
   {
     title: "Ikigai: The Japanese Secret to a Long and Happy Life",
