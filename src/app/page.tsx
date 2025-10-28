@@ -75,15 +75,17 @@ export default function Home() {
 
         {/* Body */}
         <div className="text-gray-700 dark:text-gray-300">
-          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.1)} viewport={{ once: true, amount: 0.2 }}>
+          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.1)}
+          viewport={{ once: true, amount: 0.2 }}>
             Welcome to my cozy little corner of the internet. Sit back, make yourself comfortable,
             and let me tell you a bit about myself.
           </motion.p>
 
-          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.16)} viewport={{ once: true, amount: 0.2 }}>
-            I&apos;m an engineer, developer, and part-time creative based in the Bay Area&mdash;
-            specializing in hardware and low-level systems. I&apos;m currently working as a GPU
-            Architect at&nbsp;
+          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.16)}
+          viewport={{ once: true, amount: 0.2 }}>
+            I&apos;m an engineer, developer, and part-time creative based in the Bay
+            Area&mdash;specializing in hardware and low-level systems. I&apos;m currently working
+            as a GPU Architect at&nbsp;
             <a href="https://www.nvidia.com/en-us" target="_blank" className="border-b inline-block">
               NVIDIA
             </a>
@@ -94,29 +96,42 @@ export default function Home() {
             </a>.
           </motion.p>
 
-          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.22)} viewport={{ once: true, amount: 0.2 }}>
-            Born and raised in the Philly suburbs (Go Birds!), I originally
-            ventured out to the City of Angels to become a physicist before
-            rediscovering a love for computers and technology...
+          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.22)}
+          viewport={{ once: true, amount: 0.2 }}>
+            Born and raised in the Philly suburbs (Go Birds!), I originally ventured out to the
+            City of Angels to become a physicist before rediscovering a love for computers and
+            technology. In particular, I was fascinated by low-level systems and hardware design.
+            Hoping to learn the magic of making electrons efficiently dance on a rock, a computer
+            engineering lackey was born.
           </motion.p>
 
-          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.28)} viewport={{ once: true, amount: 0.2 }}>
+          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.28)}
+          viewport={{ once: true, amount: 0.2 }}>
             Over the past several years, I&apos;ve worked across a variety of
-            areas&mdash;including GPU hardware design, FPGA engineering, and more.
+            areas&mdash;including GPU hardware design, FPGA engineering, low-level software
+            development, photonic computing research, and entrepreneurship. Currently I&apos;m
+            interested in hardware acceleration, reconfigurable computing (especially FPGAs),
+            open-source silicon, and hardware/software co-design.
           </motion.p>
 
-          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.34)} viewport={{ once: true, amount: 0.2 }}>
-            Outside of engineering, you can find me reading and writing, shooting archery (I shoot recurve!),
-            spending time outdoors, playing poker, or trying out new food spots around the Bay.
+          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.34)}
+          viewport={{ once: true, amount: 0.2 }}>
+            Outside of engineering, you can find me reading and writing, shooting archery (I shoot
+            recurve!), spending time outdoors, playing poker, or trying out new food spots around
+            the Bay.
           </motion.p>
 
-          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.4)} viewport={{ once: true, amount: 0.2 }}>
+          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.4)}
+          viewport={{ once: true, amount: 0.2 }}>
             If you&apos;d like to get in touch, feel free to&nbsp;
-            <a href="mailto:eric@erictzhong.com" className="border-b inline-block">shoot me an email</a>
+            <a href="mailto:eric@erictzhong.com" className="border-b inline-block">
+              shoot me an email
+            </a>
             &nbsp;or reach out on any of my socials.
           </motion.p>
 
-          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.46)} viewport={{ once: true, amount: 0.2 }}>
+          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.46)}
+          viewport={{ once: true, amount: 0.2 }}>
             Cheers!
           </motion.p>
         </div>
