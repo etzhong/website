@@ -122,26 +122,31 @@ export default function Home() {
         </div>
 
         {/* Resume */}
-        <motion.p
+        <motion.div
           initial={blockHidden}
           whileInView={blockShow(0.52)}
           viewport={{ once: true, amount: 0.2 }}
-          className="
-            inline-block
-            rounded-lg border border-zinc-200/60 dark:border-zinc-700/60
-            px-5 py-2 text-sm font-medium
-            transition-all duration-300 ease-out
-            cursor-pointer
-            hover:scale-[1.1] hover:-translate-y-[3px]
-            hover:shadow-[0_0_60px_rgba(255,255,255,0.45)] dark:hover:shadow-[0_0_60px_rgba(255,255,255,0.3)]
-            hover:ring-1 hover:ring-white/60 dark:hover:ring-white/40
-            hover:brightness-[1.12]
-          "
         >
-          <a href={LINKS.RESUME} target="_blank" rel="noopener noreferrer">
+          <a
+            href={LINKS.RESUME}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-block
+              rounded-lg border border-zinc-300/30 dark:border-zinc-700/30
+              px-6 py-2.5 text-sm font-medium text-center
+              transition-all duration-300 ease-out
+              cursor-pointer select-none
+              hover:scale-[1.1] hover:-translate-y-[3px]
+              hover:shadow-[0_0_160px_rgba(255,255,255,0.9)] dark:hover:shadow-[0_0_160px_rgba(255,255,255,0.8)]
+              hover:ring-1 hover:ring-white/95 dark:hover:ring-white/75
+              hover:border-white/60 dark:hover:border-white/50
+              hover:brightness-[1.2]
+            "
+          >
             View Resume
           </a>
-        </motion.p>
+        </motion.div>
 
         {/* Socials – now animate in the same way */}
         <motion.div
