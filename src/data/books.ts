@@ -39,7 +39,7 @@ export const PLAN_TO_READ: Book[] = [
     author: "Scott Meyers",
     link: "https://www.goodreads.com/book/show/22800553-effective-modern-c",
     cover: "/books/effective-modern-cpp.jpg",
-    notes: "The classic modern C++ book  with effective practices to live by"
+    notes: "The classic modern C++ book with effective practices to live by"
   },
 ];
 
@@ -56,14 +56,14 @@ export const FINISHED_READING: Book[] = [
     author: "Cixin Liu",
     link: "https://www.goodreads.com/book/show/40534545-ikigai",
     cover: "/books/three-body-problem.jpg",
-    notes: "One of the most imaginative and existential fiction series I've ever read. A must-read for anyone interested in science fiction"
+    notes: "One of the most imaginative fiction series I've ever read. Leaves you questioning the nature of reality and our place in it"
   },
   {
     title: "Getting Started with FPGAs",
     author: "Russell Merrick",
     link: "https://www.goodreads.com/en/book/show/119031481-getting-started-with-fpgas",
     cover: "/books/getting-started-with-fpgas.jpg",
-    notes: "An amazing zero-to-one introduction into FPGAs and digital design "
+    notes: "An amazing 0 to 1 intro to FPGAs and digital logic design "
   },
   {
     title: "Ikigai: The Japanese Secret to a Long and Happy Life",
