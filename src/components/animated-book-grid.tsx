@@ -1,4 +1,3 @@
-// /components/animated-book-grid.tsx
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
