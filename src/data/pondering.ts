@@ -18,7 +18,7 @@ export const QUESTIONS: Question[] = [
       designing hardware more like software?`,
   },
   {
-    question: `How do you properly educate people in an age of AI?`,
+    question: `How do we properly educate people in an age of AI?`,
     context: `In the few years since ChatGPT released, AI has completely disrupted education and the learning process.
       How do we ensure the next generation learns how to think critically while still leveraging AI's incredible potential?`,
   },
