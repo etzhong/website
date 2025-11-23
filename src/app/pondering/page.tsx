@@ -71,7 +71,9 @@ export default function Questions() {
         whileInView={blockShow(0.3)}
         viewport={{ once: true, amount: 0.2 }}
       >
-        Have thoughts on any of these? Feel free to reach out! Would love to chat about it over some coffee.
+        Have thoughts on any of these? Feel free to reach out!
+        <br/>
+        Would love to chat about it over some coffee.
       </motion.div>
     </div>
   );
