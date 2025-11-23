@@ -65,13 +65,14 @@ export default function Home() {
 
         {/* Headline */}
         <motion.h1
-          className="text-3xl font-bold"
+          className="text-5xl font-bold"
           initial={blockHidden}
           whileInView={blockShow(0.05)}
           viewport={{ once: true, amount: 0.2 }}
         >
           Hey, I&apos;m Eric!
         </motion.h1>
+        <div className="h-2"></div>
 
         {/* Body */}
         <div className="text-gray-700 dark:text-gray-300">

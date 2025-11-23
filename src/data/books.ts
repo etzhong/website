@@ -69,6 +69,6 @@ export const FINISHED_READING: Book[] = [
     author: "Hector Garcia, Francesc Miralles",
     link: "https://www.goodreads.com/book/show/40534545-ikigai",
     cover: "/books/ikigai.jpg",
-    notes: "Some good old-fashioned Japanese wisdom"
+    notes: "How to live your life, and find your purpose within it"
   },
 ];

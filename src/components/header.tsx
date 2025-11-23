@@ -9,6 +9,7 @@ import React from "react";
 const navItems = {
   "/": { name: "home" },
   "/bookshelf": { name: "bookshelf" },
+  "/pondering": { name: "pondering" },
   // "/blog": { name: "blog" },
   // "/projects": { name: "projects" },
 };

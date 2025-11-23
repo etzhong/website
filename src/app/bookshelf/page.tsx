@@ -36,15 +36,11 @@ export default function Bookshelf() {
           What I&apos;ve been reading... 📖
         </motion.h1>
 
-        <motion.h3
-          className="text-zinc-600 dark:text-zinc-400 max-w-4xl"
-          initial={blockHidden}
-          whileInView={blockShow(0.08)}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          A living shelf of notable books I&apos;m currently reading, already read, or plan to
-          read. Currently a mix of technical, introspective, and just-for-fun.
-        </motion.h3>
+        <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.08)}
+          viewport={{ once: true, amount: 0.2 }}>
+          A living shelf of notable things I&apos;m currently reading, plan to read. or already read. Currently a mix of
+          technical, introspective, and just-for-fun.
+        </motion.p>
       </section>
 
       {/* CURRENTLY READING */}
