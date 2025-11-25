@@ -23,7 +23,7 @@ export function Header() {
       <div className="lg:sticky lg:top-20">
         <LayoutGroup>
           <nav
-            className="fade relative scroll-pr-6 px-0 pb-0 md:relative md:overflow-auto"
+            className="fade relative scroll-pr-6 px-0 pb-0 md:relative overflow-hidden"
             id="nav"
           >
             <div className="flex w-full flex-row items-center justify-between">
