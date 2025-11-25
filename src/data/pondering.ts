@@ -11,26 +11,28 @@ export const QUESTIONS: Question[] = [
       designing hardware more like software?`,
   },
   {
-    question: `How can you truly be “full stack” as an engineer as hardware and software complexity grows
-      exponentially?`,
+    question: `How can you truly be “full stack” as an engineer with exponentially growing hardware and software
+      complexity?`,
     context: `Modern systems have become so intricate that achieving end-to-end visibility of hardware and software
       seems impossible. As a co-design engineer, how do you maintain that full-stack vision? Is it even realistic to
       try?`,
   },
   {
     question: `What does the next fundamental computing paradigm look like?`,
-    context: `Reconfigurable? Quantum? Photonic? Neuromorphic? Some combination of all of these? What is the next big step in computing technology and how can we build integrated, programmable systems with it?`,
+    context: `Reconfigurable? Quantum? Photonic? Neuromorphic? Some combination of all of these? What is the next big
+      step in computing technology and how can we build integrated, programmable systems with it?`,
   },
   {
     question: `How do you sustain a life of learning after school while pursuing a career?`,
-    context: `This hit me especially hard as a new grad. Learning new things has become an intentional choice
-      rather than a structured obligation. How can you continuously learn with external obligations and no strict
-      finish line in sight?`,
+    context: `This hit me especially hard as a new grad. Learning new things has become an intentional choice rather
+      than a structured obligation. How can you continuously learn with outside responsibilities and no class to
+      enforce it?`,
   },
   {
     question: `How do we properly educate people in an age of AI?`,
     context: `In the few years since ChatGPT released, AI has completely disrupted education and the learning process.
-      How do we ensure the next generation learns how to think critically while still leveraging AI's incredible potential?`,
+      How do we ensure the next generation learns how to think critically while still leveraging AI's incredible 
+      potential?`,
   },
   {
     question: `As a young adult, how can we have it all: love, friends, family, and a career we're proud of?`,
