@@ -48,7 +48,7 @@ export default function Bookshelf() {
         <motion.h2
           className="text-2xl font-semibold tracking-tight"
           initial={blockHidden}
-          whileInView={blockShow(0.12)}
+          whileInView={blockShow(0)}
           viewport={{ once: true, amount: 0.2 }}
         >
           Currently Reading
@@ -57,7 +57,7 @@ export default function Bookshelf() {
         {/* Grid appears just after the heading */}
         <motion.div
           initial={blockHidden}
-          whileInView={blockShow(0.18)}
+          whileInView={blockShow(0.06)}
           viewport={{ once: true, amount: 0.2 }}
         >
           <AnimatedBookGrid books={CURRENTLY_READING} />
@@ -69,7 +69,7 @@ export default function Bookshelf() {
         <motion.h2
           className="text-2xl font-semibold tracking-tight"
           initial={blockHidden}
-          whileInView={blockShow(0.24)}
+          whileInView={blockShow(0)}
           viewport={{ once: true, amount: 0.2 }}
         >
           Plan to Read
@@ -77,7 +77,7 @@ export default function Bookshelf() {
 
         <motion.div
           initial={blockHidden}
-          whileInView={blockShow(0.30)}
+          whileInView={blockShow(0.06)}
           viewport={{ once: true, amount: 0.2 }}
         >
           <AnimatedBookGrid books={PLAN_TO_READ} />
@@ -89,7 +89,7 @@ export default function Bookshelf() {
         <motion.h2
           className="text-2xl font-semibold tracking-tight"
           initial={blockHidden}
-          whileInView={blockShow(0.36)}
+          whileInView={blockShow(0)}
           viewport={{ once: true, amount: 0.2 }}
         >
           Finished Reading
@@ -97,7 +97,7 @@ export default function Bookshelf() {
 
         <motion.div
           initial={blockHidden}
-          whileInView={blockShow(0.42)}
+          whileInView={blockShow(0.06)}
           viewport={{ once: true, amount: 0.2 }}
         >
           <AnimatedBookGrid books={FINISHED_READING} />

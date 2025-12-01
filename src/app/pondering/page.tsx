@@ -3,9 +3,38 @@
 import { QUESTIONS, Question } from "@/data/pondering";
 import { motion, useReducedMotion } from "framer-motion";
 
-function QuestionItem({ question }: { question: Question }) {
+function QuestionItem({
+  question,
+  index,
+  reduce,
+}: {
+  question: Question;
+  index: number;
+  reduce: boolean;
+}) {
+  // Small stagger delay for first few items that may be visible together
+  const staggerDelay = Math.min(index * 0.08, 0.3);
+
+  const itemHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 14 };
+  const itemShow = reduce
+    ? { opacity: 1, transition: { duration: 0.25, delay: staggerDelay } }
+    : {
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.35,
+          delay: staggerDelay,
+          ease: [0.22, 0.61, 0.36, 1],
+        },
+      };
+
   return (
-    <motion.li className="space-y-2" variants={itemVariants}>
+    <motion.li
+      className="space-y-2"
+      initial={itemHidden}
+      whileInView={itemShow}
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <div className="text-zinc-900 dark:text-zinc-100">
         {question.question}
       </div>
@@ -17,25 +46,6 @@ function QuestionItem({ question }: { question: Question }) {
     </motion.li>
   );
 }
-
-const listVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.05,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 14 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.35, ease: [0.22, 0.61, 0.36, 1] },
-  },
-};
 
 export default function Questions() {
   const reduce = useReducedMotion?.() ?? false;
@@ -71,17 +81,16 @@ export default function Questions() {
       </section>
 
       {/* Pondering List */}
-      <motion.ul
-        className="space-y-6 text-xl leading-relaxed"
-        variants={listVariants}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
-      >
+      <ul className="space-y-6 text-xl leading-relaxed">
         {QUESTIONS.map((question, index) => (
-          <QuestionItem key={index} question={question} />
+          <QuestionItem
+            key={index}
+            question={question}
+            index={index}
+            reduce={reduce}
+          />
         ))}
-      </motion.ul>
+      </ul>
 
       {/* Footer note */}
       <motion.div

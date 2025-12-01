@@ -1,6 +1,8 @@
+import React from "react";
+
 export type Question = {
   question: string;
-  context?: string;
+  context?: React.ReactNode;
 };
 
 export const QUESTIONS: Question[] = [
@@ -11,7 +13,7 @@ export const QUESTIONS: Question[] = [
       designing hardware more like software?`,
   },
   {
-    question: `How can you truly be “full stack” as an engineer with exponentially growing hardware and software
+    question: `How can you truly be "full stack" as an engineer with exponentially growing hardware and software
       complexity?`,
     context: `Modern systems have become so intricate that achieving end-to-end visibility of hardware and software
       seems impossible. As a co-design engineer, how do you maintain that full-stack vision? Is it even realistic to
@@ -31,11 +33,22 @@ export const QUESTIONS: Question[] = [
   {
     question: `How do we properly educate people in an age of AI?`,
     context: `In the few years since ChatGPT released, AI has completely disrupted education and the learning process.
-      How do we ensure the next generation learns how to think critically while still leveraging AI's incredible 
+      How do we ensure the next generation learns how to think critically while still leveraging AI's incredible
       potential?`,
   },
   {
     question: `As a young adult, how can we have it all: love, friends, family, and a career we're proud of?`,
-    context: `Borrowing this question from my friend Steve. Something I'm really trying to figure out in my 20s.`,
+    context: (
+      <>
+        Borrowing {" "}
+        <a href="https://steviesteveee.substack.com/p/love-friends-family-and-a-career"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border-b hover:text-zinc-100"
+        >this question</a>
+        {" "} from my friend Steve. Something I&apos;m really trying to figure out in my 20s.
+      </>
+    ),
   },
 ];
+
