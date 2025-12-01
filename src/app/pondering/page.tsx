@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 function QuestionItem({ question }: { question: Question }) {
   return (
-    <li className="space-y-2">
+    <motion.li className="space-y-2" variants={itemVariants}>
       <div className="text-zinc-900 dark:text-zinc-100">
         {question.question}
       </div>
@@ -14,21 +14,40 @@ function QuestionItem({ question }: { question: Question }) {
           {question.context}
         </div>
       )}
-    </li>
+    </motion.li>
   );
 }
+
+const listVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 14 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.35, ease: [0.22, 0.61, 0.36, 1] },
+  },
+};
 
 export default function Questions() {
   const reduce = useReducedMotion?.() ?? false;
 
-  const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 24 };
+  const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 18 };
   const blockShow = (delay = 0) =>
     reduce
-      ? { opacity: 1, transition: { duration: 0.35, delay } }
+      ? { opacity: 1, transition: { duration: 0.25, delay } }
       : {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.7, delay, ease: [0.22, 0.61, 0.36, 1] },
+          transition: { duration: 0.45, delay, ease: [0.22, 0.61, 0.36, 1] },
         };
 
   return (
@@ -52,23 +71,23 @@ export default function Questions() {
       </section>
 
       {/* Pondering List */}
-      <motion.section
-        initial={blockHidden}
-        whileInView={blockShow(0.12)}
-        viewport={{ once: true, amount: 0.2 }}
+      <motion.ul
+        className="space-y-6 text-xl leading-relaxed"
+        variants={listVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
       >
-        <ul className="space-y-6 text-xl leading-relaxed">
-          {QUESTIONS.map((question, index) => (
-            <QuestionItem key={index} question={question} />
-          ))}
-        </ul>
-      </motion.section>
+        {QUESTIONS.map((question, index) => (
+          <QuestionItem key={index} question={question} />
+        ))}
+      </motion.ul>
 
       {/* Footer note */}
       <motion.div
         className="pt-8 text-sm text-zinc-500 dark:text-zinc-500"
         initial={blockHidden}
-        whileInView={blockShow(0.3)}
+        whileInView={blockShow(0)}
         viewport={{ once: true, amount: 0.2 }}
       >
         Have thoughts on any of these? Feel free to reach out!

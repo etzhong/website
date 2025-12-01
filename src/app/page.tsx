@@ -18,27 +18,27 @@ export default function Home() {
 
   const reduce = useReducedMotion?.() ?? false;
 
-  const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 24 };
+  const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 18 };
   const blockShow = (delay = 0) =>
     reduce
-      ? { opacity: 1, transition: { duration: 0.35, delay } }
+      ? { opacity: 1, transition: { duration: 0.25, delay } }
       : {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.7, delay, ease: [0.22, 0.61, 0.36, 1] },
+          transition: { duration: 0.45, delay, ease: [0.22, 0.61, 0.36, 1] },
         };
 
   const groupVariants = {
     hidden: {},
     show: {
-      transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+      transition: { staggerChildren: 0.08, delayChildren: 0.05 },
     },
   };
   const childVariants = reduce
-    ? { hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0.35 } } }
+    ? { hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0.25 } } }
     : {
-        hidden: { opacity: 0, y: 18 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 0.61, 0.36, 1] } },
+        hidden: { opacity: 0, y: 12 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 0.61, 0.36, 1] } },
       };
 
   return (

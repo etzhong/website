@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { Space_Grotesk } from "next/font/google";
 import { siteMetadata } from "@/data/siteMetadata";
 import Head from "./head";
@@ -77,7 +76,6 @@ export default function RootLayout({
             {children}
             <Footer />
           </main>
-          <TailwindIndicator />
         </ThemeProvider>
         <GoogleAnalytics gaId={ENV.GOOGLE_ANALYTICS_ID} />
         <GoogleAdsense pId={ENV.ADSENSE_CLIENT_ID} />
