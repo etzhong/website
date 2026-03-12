@@ -78,13 +78,13 @@ export default function Home() {
         <div className="text-gray-700 dark:text-gray-300">
           <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.1)}
           viewport={{ once: true, amount: 0.2 }}>
-            Welcome to my cozy little corner of the internet. Sit back, make yourself comfortable,
+            Welcome to my personal corner of the internet. Sit back, make yourself comfortable,
             and let me tell you a bit about myself.
           </motion.p>
 
           <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.16)}
           viewport={{ once: true, amount: 0.2 }}>
-            I&apos;m an engineer, developer, and part-time creative based in the Bay
+            I&apos;m an engineer, developer, and professional rabbit hole diver based in the Bay
             Area&mdash;specializing in hardware and low-level systems. I&apos;m currently working
             as a GPU Architect at&nbsp;
             <a href="https://www.nvidia.com/en-us" target="_blank" className="border-b inline-block">
@@ -111,8 +111,7 @@ export default function Home() {
             Over the past several years, I&apos;ve worked across a variety of
             areas&mdash;including GPU hardware design, FPGA engineering, low-level software
             development, photonic computing research, and entrepreneurship. Currently I&apos;m
-            interested in hardware acceleration, reconfigurable computing (especially FPGAs),
-            open-source silicon, and hardware/software co-design.
+            interested in hardware acceleration, reconfigurable computing, open-source silicon, and hardware/software co-design.
           </motion.p>
 
           <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.34)}
