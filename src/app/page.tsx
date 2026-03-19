@@ -117,7 +117,7 @@ export default function Home() {
           <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.34)}
           viewport={{ once: true, amount: 0.2 }}>
             Outside of engineering, you can find me reading and writing, shooting archery (I shoot
-            recurve!), spending time outdoors, playing poker, or trying out new food spots around
+            recurve!), scuba diving, playing poker, or trying out new food spots around
             the Bay.
           </motion.p>
 
