@@ -10,11 +10,11 @@ export function AnimatedBookGrid({ books }: { books: Book[] }) {
   const hidden = reduce ? { opacity: 0 } : { opacity: 0, y: 24 };
   const visible = (i: number) =>
     reduce
-      ? { opacity: 1, transition: { duration: 0.35, delay: i * 0.12 } }
+      ? { opacity: 1, transition: { duration: 0.35, delay: i * 0.1 } }
       : {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.7, delay: i * 0.12, ease: [0.22, 0.61, 0.36, 1] },
+          transition: { duration: 0.55, delay: i * 0.1, ease: [0.22, 0.61, 0.36, 1] },
         };
 
   return (
@@ -25,12 +25,7 @@ export function AnimatedBookGrid({ books }: { books: Book[] }) {
           className="h-full will-change-transform"
           initial={hidden}
           whileInView={visible(i)}
-          viewport={{
-            once: true,
-            amount: 0.05,     // 👈 trigger when ~5% of the tile is visible
-            // optional: start a touch earlier while scrolling down
-            // margin: "0px 0px -5% 0px",
-          }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <BookCard book={b} className="h-full" />
         </motion.div>
