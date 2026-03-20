@@ -9,12 +9,26 @@ export type Book = {
 };
 
 export const CURRENTLY_READING: Book[] = [
-    {
+  {
+    title: "Programming Massively Parallel Processors",
+    author: "David B. Kirk, Wen-Mei W. Hwu, Izzat El Hajj",
+    link: "https://www.goodreads.com/book/show/59856387-programming-massively-parallel-processors",
+    cover: "/books/programming-massively-parallel-processors.jpg",
+    notes: "Fundamentals of GPUs, CUDA, and the most important programming paradigm of our time",
+  },
+  {
+    title: "Architecting and Building High-Speed SoCs",
+    author: "Mounir Maaref",
+    link: "https://www.goodreads.com/book/show/75404756-architecting-and-building-high-speed-socs",
+    cover: "/books/architecting-and-building-high-speed-socs.jpg",
+    notes: "An incredible deep dive into modern SoC design and implementation with FPGAs. Truly a co-design engineer's delight",
+  },
+  {
     title: "RTL Modeling with SystemVerilog for Simulation and Synthesis",
     author: "Stuart Sutherland",
     link: "https://www.goodreads.com/en/book/show/35409207-rtl-modeling-with-systemverilog-for-simulation-and-synthesis",
     cover: "/books/rtl-modeling.jpg",
-    notes: "A comprehensive reference for everything modern SV has to offer",
+    notes: "A comprehensive for anything and everything modern SV has to offer",
   },
   {
     title: "Children of Time",
@@ -22,7 +36,7 @@ export const CURRENTLY_READING: Book[] = [
     link: "https://www.goodreads.com/book/show/25499718-children-of-time",
     cover: "/books/children-of-time.jpg",
     notes: "A gripping science-fiction take on a dwindling humanity's future among the stars after fleeing a dying Earth",
-  }
+  },
 ];
 
 export const PLAN_TO_READ: Book[] = [
@@ -46,29 +60,29 @@ export const FINISHED_READING: Book[] = [
   {
     title: "Parallel Computer Organization and Design",
     author: "Michel Dubois, Murali Annavaram, Per Stenström",
-    link: "https://www.goodreads.com/book/show/40534545-ikigai",
+    link: "https://www.goodreads.com/en/book/show/13728298-parallel-computer-organization-and-design",
     cover: "/books/pcoad.jpg",
-    notes: "My USC comparch professor's book. A great modern revision of Hennessey and Patterson"
+    notes: "My computer architecture professor's book. A great modern extension of Hennessey and Patterson"
   },
   {
-    title: "The Three-Body Problem (trilogy)",
+    title: "Remembrance of Earth's Past (Three-Body Trilogy)",
     author: "Cixin Liu",
-    link: "https://www.goodreads.com/book/show/40534545-ikigai",
-    cover: "/books/three-body-problem.jpg",
-    notes: "One of the most imaginative fiction series I've ever read. Leaves you questioning the nature of reality and our place in it"
+    link: "https://www.goodreads.com/book/show/34569357-remembrance-of-earth-s-past",
+    cover: "/books/remembrance-of-earths-past.jpg",
+    notes: "The most imaginative work of fiction I've ever read. Leaves you questioning the nature of reality and our humble place within it"
   },
   {
     title: "Getting Started with FPGAs",
     author: "Russell Merrick",
     link: "https://www.goodreads.com/en/book/show/119031481-getting-started-with-fpgas",
     cover: "/books/getting-started-with-fpgas.jpg",
-    notes: "An amazing 0 to 1 intro to FPGAs and digital logic design "
+    notes: "An amazing 0 to 1 introduction to FPGAs and digital logic design"
   },
   {
     title: "Ikigai: The Japanese Secret to a Long and Happy Life",
     author: "Hector Garcia, Francesc Miralles",
-    link: "https://www.goodreads.com/book/show/40534545-ikigai",
+    link: "https://www.goodreads.com/book/show/36073585-ikigai",
     cover: "/books/ikigai.jpg",
-    notes: "How to live your life, and find your purpose within it"
+    notes: "How to live a long life, and find your purpose within it"
   },
 ];
