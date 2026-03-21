@@ -36,7 +36,7 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      <section className="mb-5">
+      <section className="mb-5 flex min-h-[calc(100svh-12rem)] flex-col justify-center pb-10 md:min-h-[calc(100svh-14rem)] md:pb-20">
         {/* Avatar */}
         <motion.div initial={blockHidden} whileInView={blockShow(0)} viewport={{ once: true, amount: 0.2 }}>
           <Image
@@ -79,12 +79,12 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}>
             I&apos;m an engineer, developer, and professional rabbit hole diver based in the Bay
             Area&mdash;specializing in hardware and low-level systems. I&apos;m currently working
-            as a GPU Architect at&nbsp;
+            as a GPU Architect at{" "}
             <a href="https://www.nvidia.com/en-us" target="_blank" className="border-b inline-block">
               NVIDIA
             </a>
-            &nbsp;in Santa Clara. Before that, I graduated concurrently with my master&apos;s and
-            bachelor&apos;s in Electrical Engineering and Computer Science from&nbsp;
+            {" "}in Santa Clara. Before that, I graduated concurrently with my master&apos;s and
+            bachelor&apos;s in Electrical Engineering and Computer Science from{" "}
             <a href="https://viterbischool.usc.edu" target="_blank" className="border-b inline-block">
               USC
             </a>.
@@ -116,11 +116,11 @@ export default function Home() {
 
           <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.4)}
           viewport={{ once: true, amount: 0.2 }}>
-            If you&apos;d like to get in touch, feel free to&nbsp;
+            If you&apos;d like to get in touch, feel free to{" "}
             <a href="mailto:eric@erictzhong.com" className="border-b inline-block">
               shoot me an email
             </a>
-            &nbsp;or reach out on any of my socials.
+            {" "}or reach out on any of my socials.
           </motion.p>
 
           <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.46)}

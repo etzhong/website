@@ -70,7 +70,7 @@ export default function Questions() {
           whileInView={blockShow(0.0)}
           viewport={{ once: true, amount: 0.2 }}
         >
-          Things I&apos;m thinking about...
+          What I&apos;m thinking about...
         </motion.h1>
 
         <motion.p
