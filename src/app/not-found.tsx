@@ -22,11 +22,13 @@ export default function NotFound() {
       </div>
       <div className="max-w-md">
         <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-          Sorry we couldn&apos;t find this page.
+          Whoops! This page does not exist
         </p>
-
+        <p>
+          Either I didn't code it or something moved around.
+        </p>
         <Link href="/" className="underline">
-          Back to homepage
+          Click me to return to civilization
         </Link>
       </div>
     </div>

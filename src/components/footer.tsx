@@ -8,7 +8,6 @@ export function Footer() {
       <p className="text-gray-500  dark:text-gray-400 text-sm">
         © {new Date().getFullYear()}&nbsp;
         <a
-          href={siteMetadata.social.x}
           target="_blank"
           rel="noopener noreferrer"
         >
