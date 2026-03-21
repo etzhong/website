@@ -1,5 +1,5 @@
 import { BlogCard } from "@/components/blog-card";
-import { allBlogs } from "contentlayer2/generated";
+import { allBlogs } from "contentlayer/generated";
 import { Metadata } from "next";
 import { generatePageMetadata } from "../seo";
 import Link from "next/link";
