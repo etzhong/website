@@ -164,7 +164,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.25 }}
           variants={groupVariants}
         >
-          {SOCIALS.map((social, i) => (
+          {SOCIALS.map((social) => (
             <motion.div key={social.label} variants={childVariants}>
               <SocialLink
                 aria-label={`Follow on ${social.label}`}

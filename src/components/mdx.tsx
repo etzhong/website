@@ -1,7 +1,14 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { compileMDX } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
+import rehypePrettyCode, {
+  CharsElement,
+  LineElement,
+} from "rehype-pretty-code";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { BlogComments } from "./blog-comments";
 
 function CustomLink(props: { href: string; children: React.ReactNode }) {
@@ -41,14 +48,55 @@ const components = {
   Callout,
 };
 
-export function Mdx({ code }: { code: string }) {
-  const MDXComponent = useMDXComponent(code);
+export async function Mdx({ source }: { source: string }) {
+  const { content } = await compileMDX({
+    source,
+    options: {
+      parseFrontmatter: false,
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [
+          rehypeSlug,
+          [
+            rehypePrettyCode,
+            {
+              theme: "one-dark-pro",
+              keepBackground: false,
+
+              onVisitHighlightedLine(node: LineElement) {
+                if (
+                  node.properties.className &&
+                  node.properties.className.length > 0
+                ) {
+                  node.properties.className.push("line--highlighted");
+                } else {
+                  node.properties.className = ["line--highlighted"];
+                }
+              },
+              onVisitHighlightedChars(node: CharsElement) {
+                node.properties.className = ["word--highlighted"];
+              },
+            },
+          ],
+          [
+            rehypeAutolinkHeadings,
+            {
+              properties: {
+                className: ["anchor"],
+              },
+            },
+          ],
+        ],
+      },
+    },
+    components,
+  });
 
   return (
     <React.Fragment>
       {/* https://github.com/tailwindlabs/tailwindcss-typography#overriding-max-width */}
       <article className="prose prose-neutral dark:prose-invert prose-quoteless  max-w-none">
-        <MDXComponent components={components} />
+        {content}
       </article>
       <BlogComments />
     </React.Fragment>

@@ -1,4 +1,3 @@
-import { ENV } from "@/lib/env";
 import Script from "next/script";
 
 export const GoogleAdsense = ({ pId }: { pId: string }) => {

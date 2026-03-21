@@ -1,6 +1,5 @@
 "use client";
 
-import { generatePageMetadata } from "../seo";
 import React from "react";
 import {
   CURRENTLY_READING,
@@ -31,20 +30,24 @@ export default function Bookshelf() {
         <motion.h1
           className="text-5xl font-semibold tracking-tight"
           initial={blockHidden}
-          whileInView={blockShow(0.00)}
+          whileInView={blockShow(0.0)}
           viewport={{ once: true, amount: 0.2 }}
         >
-          What I&apos;ve been reading... 📖
+          What I&apos;ve been reading...
         </motion.h1>
 
-        <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.08)}
-          viewport={{ once: true, amount: 0.2 }}>
-          A living shelf of notable things I&apos;m currently reading, plan to read. or already read. Currently a mix of
-          technical, introspective, and just-for-fun.
+        <motion.p
+          className="mt-4 mb-4"
+          initial={blockHidden}
+          whileInView={blockShow(0.08)}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          A living shelf of notable things I&apos;m currently reading, plan to
+          read, or already read. Currently a mix of technical, introspective,
+          and just-for-fun.
         </motion.p>
       </section>
 
-      {/* CURRENTLY READING */}
       <section className="space-y-6 lg:space-y-4">
         <motion.h2
           className="text-2xl font-semibold tracking-tight"
@@ -55,7 +58,6 @@ export default function Bookshelf() {
           Currently Reading
         </motion.h2>
 
-        {/* Grid appears just after the heading */}
         <motion.div
           initial={blockHidden}
           whileInView={blockShow(0.06)}
@@ -65,7 +67,6 @@ export default function Bookshelf() {
         </motion.div>
       </section>
 
-      {/* PLAN TO READ */}
       <section className="space-y-6 lg:space-y-4">
         <motion.h2
           className="text-2xl font-semibold tracking-tight"
@@ -85,7 +86,6 @@ export default function Bookshelf() {
         </motion.div>
       </section>
 
-      {/* FINISHED READING */}
       <section className="space-y-6 lg:space-y-4">
         <motion.h2
           className="text-2xl font-semibold tracking-tight"

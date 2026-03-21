@@ -12,7 +12,6 @@ function QuestionItem({
   index: number;
   reduce: boolean;
 }) {
-  // Small stagger delay for first few items that may be visible together
   const staggerDelay = Math.min(index * 0.08, 0.3);
   const ease = [0.22, 0.61, 0.36, 1] as const;
 
@@ -64,7 +63,6 @@ export default function Questions() {
 
   return (
     <div className="space-y-12 lg:space-y-16">
-      {/* Title + subtitle */}
       <section className="space-y-6 lg:space-y-8">
         <motion.h1
           className="text-5xl font-semibold tracking-tight"
@@ -72,17 +70,21 @@ export default function Questions() {
           whileInView={blockShow(0.0)}
           viewport={{ once: true, amount: 0.2 }}
         >
-          Things I&apos;m thinking about... 🤔
+          Things I&apos;m thinking about...
         </motion.h1>
 
-        <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.08)}
-          viewport={{ once: true, amount: 0.2 }}>
-            A collection of open questions, problems, and challenges I&apos;m exploring across engineering,
-            life, society, and beyond. Updated semi-regularly as thoughts come and go.
+        <motion.p
+          className="mt-4 mb-4"
+          initial={blockHidden}
+          whileInView={blockShow(0.08)}
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          A collection of open questions, problems, and challenges I&apos;m
+          exploring across engineering, life, society, and beyond. Updated
+          semi-regularly as thoughts come and go.
         </motion.p>
       </section>
 
-      {/* Pondering List */}
       <ul className="space-y-6 text-xl leading-relaxed">
         {QUESTIONS.map((question, index) => (
           <QuestionItem
@@ -94,7 +96,6 @@ export default function Questions() {
         ))}
       </ul>
 
-      {/* Footer note */}
       <motion.div
         className="pt-8 text-sm text-zinc-500 dark:text-zinc-500"
         initial={blockHidden}
@@ -102,10 +103,9 @@ export default function Questions() {
         viewport={{ once: true, amount: 0.2 }}
       >
         Have thoughts on any of these? Feel free to reach out!
-        <br/>
+        <br />
         Would love to chat about it over some coffee.
       </motion.div>
     </div>
   );
 }
-

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { allBlogs } from "contentlayer/generated";
+import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import Balancer from "react-wrap-balancer";
 import { Mdx } from "@/components/mdx";
 import { siteMetadata } from "@/data/siteMetadata";
@@ -9,7 +9,8 @@ import { formatDate } from "@/lib/utils";
 type BlogPageParams = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
-  const paths = allBlogs.map((blog) => ({ slug: blog.slug }));
+  const blogs = await getAllBlogs();
+  const paths = blogs.map((blog) => ({ slug: blog.slug }));
 
   return paths;
 }
@@ -20,7 +21,7 @@ export async function generateMetadata({
   params: BlogPageParams;
 }): Promise<Metadata | undefined> {
   const { slug } = await params;
-  const blog = allBlogs.find((p) => p.slug === slug);
+  const blog = await getBlogBySlug(slug);
   if (!blog) {
     return;
   }
@@ -59,7 +60,7 @@ export async function generateMetadata({
 
 export default async function Blog({ params }: { params: BlogPageParams }) {
   const { slug } = await params;
-  const blog = allBlogs.find((blog) => blog.slug === slug);
+  const blog = await getBlogBySlug(slug);
 
   if (!blog) {
     return <NotFound />;
@@ -75,7 +76,7 @@ export default async function Blog({ params }: { params: BlogPageParams }) {
           {formatDate(blog.publishedAt)} - {blog.readingTime.text}
         </p>
       </div>
-      <Mdx code={blog.body.code} />
+      <Mdx source={blog.content} />
     </section>
   );
 }

@@ -24,9 +24,6 @@ export default function NotFound() {
         <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
           Whoops! This page does not exist
         </p>
-        <p>
-          Either I didn't code it or something moved around.
-        </p>
         <Link href="/" className="underline">
           Click me to return to civilization
         </Link>
@@ -34,3 +31,4 @@ export default function NotFound() {
     </div>
   );
 }
+ 
