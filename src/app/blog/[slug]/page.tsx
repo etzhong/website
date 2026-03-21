@@ -1,11 +1,12 @@
-import type { GetStaticPaths, Metadata } from "next";
-import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { allBlogs } from "contentlayer/generated";
 import Balancer from "react-wrap-balancer";
 import { Mdx } from "@/components/mdx";
 import { siteMetadata } from "@/data/siteMetadata";
 import NotFound from "@/app/not-found";
 import { formatDate } from "@/lib/utils";
+
+type BlogPageParams = Promise<{ slug: string }>;
 
 export async function generateStaticParams() {
   const paths = allBlogs.map((blog) => ({ slug: blog.slug }));
@@ -16,9 +17,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: BlogPageParams;
 }): Promise<Metadata | undefined> {
-  const blog = allBlogs.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const blog = allBlogs.find((p) => p.slug === slug);
   if (!blog) {
     return;
   }
@@ -55,8 +57,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function Blog({ params }: { params: { slug: string } }) {
-  const blog = allBlogs.find((blog) => blog.slug === params.slug);
+export default async function Blog({ params }: { params: BlogPageParams }) {
+  const { slug } = await params;
+  const blog = allBlogs.find((blog) => blog.slug === slug);
 
   if (!blog) {
     return <NotFound />;
