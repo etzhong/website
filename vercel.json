@@ -1,3 +1,0 @@
-{
-  "buildCommand": "pnpm exec contentlayer2 build && next build"
-}
