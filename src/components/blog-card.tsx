@@ -1,5 +1,5 @@
 import { formatDate } from "@/lib/utils";
-import { Blog } from "contentlayer/generated";
+import { Blog } from "@/lib/contentlayer";
 
 type BlogCardProps = Pick<
   Blog,

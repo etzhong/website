@@ -3,19 +3,11 @@
 import Image from "next/image";
 import { SOCIALS } from "../data/socials";
 import { SocialLink } from "@/components/social-link";
-import { allBlogs } from "contentlayer/generated";
-import { BlogCard } from "@/components/blog-card";
 import React from "react";
 import { LINKS } from "@/lib/constants";
-import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 
 export default function Home() {
-  const blogs = allBlogs.slice(0, 2).sort((a, b) => {
-    if (new Date(a.publishedAt) > new Date(b.publishedAt)) return -1;
-    return 1;
-  });
-
   const reduce = useReducedMotion?.() ?? false;
   const ease = [0.22, 0.61, 0.36, 1] as const;
 
