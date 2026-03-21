@@ -12,6 +12,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 export default function Bookshelf() {
   const reduce = useReducedMotion?.() ?? false;
+  const ease = [0.22, 0.61, 0.36, 1] as const;
 
   const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 18 };
   const blockShow = (delay = 0) =>
@@ -20,7 +21,7 @@ export default function Bookshelf() {
       : {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.45, delay, ease: [0.22, 0.61, 0.36, 1] },
+          transition: { duration: 0.45, delay, ease },
         };
 
   return (

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { SOCIALS } from "../data/socials";
 import { SocialLink } from "@/components/social-link";
-import { allBlogs } from "contentlayer/generated";
+import { allBlogs } from "contentlayer2/generated";
 import { BlogCard } from "@/components/blog-card";
 import React from "react";
 import { LINKS } from "@/lib/constants";
@@ -17,6 +17,7 @@ export default function Home() {
   });
 
   const reduce = useReducedMotion?.() ?? false;
+  const ease = [0.22, 0.61, 0.36, 1] as const;
 
   const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 18 };
   const blockShow = (delay = 0) =>
@@ -25,7 +26,7 @@ export default function Home() {
       : {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.45, delay, ease: [0.22, 0.61, 0.36, 1] },
+          transition: { duration: 0.45, delay, ease },
         };
 
   const groupVariants = {
@@ -38,7 +39,7 @@ export default function Home() {
     ? { hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0.25 } } }
     : {
         hidden: { opacity: 0, y: 12 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 0.61, 0.36, 1] } },
+        show: { opacity: 1, y: 0, transition: { duration: 0.4, ease } },
       };
 
   return (

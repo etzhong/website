@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useMDXComponent } from "next-contentlayer/hooks";
+import { useMDXComponent } from "next-contentlayer2/hooks";
 import { BlogComments } from "./blog-comments";
 
 function CustomLink(props: { href: string; children: React.ReactNode }) {
@@ -48,7 +48,6 @@ export function Mdx({ code }: { code: string }) {
     <React.Fragment>
       {/* https://github.com/tailwindlabs/tailwindcss-typography#overriding-max-width */}
       <article className="prose prose-neutral dark:prose-invert prose-quoteless  max-w-none">
-        {/* @ts-expect-error */}
         <MDXComponent components={components} />
       </article>
       <BlogComments />

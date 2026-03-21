@@ -2,7 +2,7 @@ import {
   ComputedFields,
   defineDocumentType,
   makeSource,
-} from "contentlayer/source-files";
+} from "contentlayer2/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode, {
   CharsElement,
@@ -57,11 +57,11 @@ export default makeSource({
   contentDirPath: "src/content/",
   documentTypes: [Blog],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm as never],
     rehypePlugins: [
-      rehypeSlug,
+      rehypeSlug as never,
       [
-        rehypePrettyCode,
+        rehypePrettyCode as never,
         {
           theme: "one-dark-pro",
           keepBackground: false,
@@ -82,7 +82,7 @@ export default makeSource({
         },
       ],
       [
-        rehypeAutolinkHeadings,
+        rehypeAutolinkHeadings as never,
         {
           properties: {
             className: ["anchor"],

@@ -6,6 +6,7 @@ import type { Book } from "@/data/books";
 
 export function AnimatedBookGrid({ books }: { books: Book[] }) {
   const reduce = useReducedMotion();
+  const ease = [0.22, 0.61, 0.36, 1] as const;
 
   const hidden = reduce ? { opacity: 0 } : { opacity: 0, y: 24 };
   const visible = (i: number) =>
@@ -14,7 +15,7 @@ export function AnimatedBookGrid({ books }: { books: Book[] }) {
       : {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.55, delay: i * 0.1, ease: [0.22, 0.61, 0.36, 1] },
+          transition: { duration: 0.55, delay: i * 0.1, ease },
         };
 
   return (

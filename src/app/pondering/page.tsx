@@ -14,6 +14,7 @@ function QuestionItem({
 }) {
   // Small stagger delay for first few items that may be visible together
   const staggerDelay = Math.min(index * 0.08, 0.3);
+  const ease = [0.22, 0.61, 0.36, 1] as const;
 
   const itemHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 14 };
   const itemShow = reduce
@@ -24,7 +25,7 @@ function QuestionItem({
         transition: {
           duration: 0.35,
           delay: staggerDelay,
-          ease: [0.22, 0.61, 0.36, 1],
+          ease,
         },
       };
 
@@ -49,6 +50,7 @@ function QuestionItem({
 
 export default function Questions() {
   const reduce = useReducedMotion?.() ?? false;
+  const ease = [0.22, 0.61, 0.36, 1] as const;
 
   const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 18 };
   const blockShow = (delay = 0) =>
@@ -57,7 +59,7 @@ export default function Questions() {
       : {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.45, delay, ease: [0.22, 0.61, 0.36, 1] },
+          transition: { duration: 0.45, delay, ease },
         };
 
   return (
@@ -75,7 +77,7 @@ export default function Questions() {
 
         <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.08)}
           viewport={{ once: true, amount: 0.2 }}>
-            A collection of open-ended questions, problems, and challenges I&apos;m exploring across engineering,
+            A collection of open questions, problems, and challenges I&apos;m exploring across engineering,
             life, society, and beyond. Updated semi-regularly as thoughts come and go.
         </motion.p>
       </section>
