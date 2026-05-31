@@ -77,9 +77,9 @@ export default function Home() {
 
           <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.16)}
           viewport={{ once: true, amount: 0.2 }}>
-            I&apos;m an engineer, developer, and professional rabbit hole diver based in the Bay
-            Area&mdash;specializing in hardware and low-level systems. I&apos;m currently working
-            as a GPU Architect at{" "}
+            I&apos;m an engineer, developer, and rabbit hole diver based in the Bay Area&mdash;
+            specializing in hardware and low-level systems. I currently work as a GPU Architect
+            at{" "}
             <a href="https://www.nvidia.com/en-us" target="_blank" className="border-b inline-block">
               NVIDIA
             </a>
