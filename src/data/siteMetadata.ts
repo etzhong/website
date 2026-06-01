@@ -4,7 +4,10 @@ export const siteMetadata = {
   siteUrl: "https://erictzhong.com",
   socialBanner: "/_static/default-og-card.png",
   description:
-    "I'm an engineer, developer, and professional rabbit hole diver based in the Bay Area - specializing in hardware and low-level systems. I'm currently working as a GPU Architect at NVIDIA in Santa Clara. Before that, I graduated concurrently with my master's and bachelor's in Electrical Engineering and Computer Science from USC.",
+    `I'm an engineer, developer, and rabbit hole diver based in the Bay Area— specializing in
+    hardware and low-level systems. I currently work as a GPU Architect at NVIDIA in Santa Clara.
+    Before that, I graduated concurrently with my master's and bachelor's in Electrical Engineering
+          and Computer Science from USC.`,
   keywords: [
     "Eric Zhong, Eric, Zhong, eric zhong, eric, zhong, erictzhong, erictzhong.com, etzhong",
   ],
