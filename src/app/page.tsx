@@ -71,15 +71,10 @@ export default function Home() {
         <div className="text-gray-700 dark:text-gray-300">
           <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.1)}
           viewport={{ once: true, amount: 0.2 }}>
-            Welcome to my personal corner of the internet. Sit back, make yourself comfortable,
-            and let me tell you a bit about myself.
-          </motion.p>
-
-          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.16)}
-          viewport={{ once: true, amount: 0.2 }}>
-            I&apos;m an engineer, developer, and rabbit hole diver based in the Bay Area&mdash;
-            specializing in hardware and low-level systems. I currently work as a GPU Architect
-            at{" "}
+            I&apos;m an engineer and developer based in San Francisco&mdash;specializing in chip
+            design and low-level systems. I&apos;m passionate about all things hardware and
+            software (especially when put together) and enjoy working on optimized
+            systems designed from first principles. Currently I work as a GPU Architect at{" "}
             <a href="https://www.nvidia.com/en-us" target="_blank" className="border-b inline-block">
               NVIDIA
             </a>
@@ -90,7 +85,7 @@ export default function Home() {
             </a>.
           </motion.p>
 
-          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.22)}
+          <motion.p className="mt-4" initial={blockHidden} whileInView={blockShow(0.16)}
           viewport={{ once: true, amount: 0.2 }}>
             Born and raised in the Philly suburbs (Go Birds!), I originally ventured out to the
             City of Angels to become a physicist before rediscovering a love for computers and
@@ -99,7 +94,7 @@ export default function Home() {
             engineering lackey was born.
           </motion.p>
 
-          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.28)}
+          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.22)}
           viewport={{ once: true, amount: 0.2 }}>
             Over the past several years, I&apos;ve worked across a variety of
             areas&mdash;including GPU hardware design, FPGA engineering, low-level software
@@ -107,14 +102,14 @@ export default function Home() {
             interested in hardware acceleration, reconfigurable computing, open-source silicon, and hardware/software co-design.
           </motion.p>
 
-          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.34)}
+          <motion.p className="mt-4 mb-4" initial={blockHidden} whileInView={blockShow(0.28)}
           viewport={{ once: true, amount: 0.2 }}>
             Outside of engineering, you can find me reading and writing, shooting archery (I shoot
             recurve!), scuba diving, playing poker, or trying out new food spots around
             the Bay.
           </motion.p>
 
-          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.4)}
+          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.34)}
           viewport={{ once: true, amount: 0.2 }}>
             If you&apos;d like to get in touch, feel free to{" "}
             <a href="mailto:eric@erictzhong.com" className="border-b inline-block">
@@ -123,7 +118,7 @@ export default function Home() {
             {" "}or reach out on any of my socials.
           </motion.p>
 
-          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.46)}
+          <motion.p className="mb-4" initial={blockHidden} whileInView={blockShow(0.4)}
           viewport={{ once: true, amount: 0.2 }}>
             Cheers!
           </motion.p>
@@ -132,7 +127,7 @@ export default function Home() {
         {/* Resume */}
         <motion.div
           initial={blockHidden}
-          whileInView={blockShow(0.52)}
+          whileInView={blockShow(0.46)}
           viewport={{ once: true, amount: 0.2 }}
         >
           <a
