@@ -39,21 +39,25 @@ export default function Home() {
       <section className="mb-5 flex min-h-[calc(100svh-12rem)] flex-col justify-center pb-10 md:min-h-[calc(100svh-14rem)] md:pb-20">
         {/* Avatar */}
         <motion.div initial={blockHidden} whileInView={blockShow(0)} viewport={{ once: true, amount: 0.2 }}>
-          <Image
-            src="/_static/headshot.jpg"
-            width={128}
-            height={128}
-            alt="avatar"
-            priority
+          <div
             className="
-              rounded-full cursor-pointer mb-5
+              h-32 w-32 overflow-hidden rounded-full cursor-pointer mb-5
               transition-all duration-300 ease-out
               hover:scale-[1.1] hover:-translate-y-1.5
-              hover:shadow-[0_0_90px_rgba(255,255,255,0.5)] dark:hover:shadow-[0_0_90px_rgba(255,255,255,0.35)]
+              hover:shadow-[0_0_95px_rgba(255,255,255,0.5)] dark:hover:shadow-[0_0_95px_rgba(255,255,255,0.35)]
               hover:ring-1 hover:ring-white/80 dark:hover:ring-white/40
               hover:brightness-[1.12]
             "
-          />
+          >
+            <Image
+              src="/_static/headshot.jpg"
+              width={256}
+              height={256}
+              alt="avatar"
+              priority
+              className="h-full w-full object-cover scale-[1.3]"
+            />
+          </div>
         </motion.div>
 
         {/* Headline */}
@@ -141,7 +145,7 @@ export default function Home() {
               transition-all duration-300 ease-out
               cursor-pointer select-none
               hover:scale-[1.1] hover:-translate-y-[3px]
-              hover:shadow-[0_0_160px_rgba(255,255,255,0.9)] dark:hover:shadow-[0_0_160px_rgba(255,255,255,0.8)]
+              hover:shadow-[0_0_75px_rgba(255,255,255,0.55)] dark:hover:shadow-[0_0_75px_rgba(255,255,255,0.4)]
               hover:ring-1 hover:ring-white/95 dark:hover:ring-white/75
               hover:border-white/60 dark:hover:border-white/50
               hover:brightness-[1.2]

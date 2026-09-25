@@ -17,7 +17,7 @@ export function SocialLink({ className, href, children, icon: Icon }: Props) {
         "flex items-center justify-center rounded-xl",
         "transition-all duration-300 ease-out",
         "hover:scale-[1.1] hover:-translate-y-[2px]",
-        "hover:shadow-[0_0_90px_rgba(255,255,255,0.55)] dark:hover:shadow-[0_0_90px_rgba(255,255,255,0.4)]",
+        "hover:shadow-[0_0_75px_rgba(255,255,255,0.55)] dark:hover:shadow-[0_0_75px_rgba(255,255,255,0.4)]",
         "hover:brightness-[1.12]"
       )}
     >
