@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import headshot from "../../public/_static/headshot.jpg";
 import { SOCIALS } from "../data/socials";
 import { SocialLink } from "@/components/social-link";
 import React from "react";
@@ -50,12 +51,12 @@ export default function Home() {
             "
           >
             <Image
-              src="/_static/headshot.jpg"
+              src={headshot}
               width={256}
               height={256}
               alt="avatar"
               priority
-              className="h-full w-full object-cover scale-[1.3]"
+              className="h-full w-full object-cover"
             />
           </div>
         </motion.div>
