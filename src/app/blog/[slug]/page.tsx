@@ -3,7 +3,7 @@ import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import Balancer from "react-wrap-balancer";
 import { Mdx } from "@/components/mdx";
 import { siteMetadata } from "@/data/siteMetadata";
-import NotFound from "@/app/not-found";
+import { notFound } from "next/navigation";
 import { formatDate } from "@/lib/utils";
 
 type BlogPageParams = Promise<{ slug: string }>;
@@ -19,14 +19,16 @@ export async function generateMetadata({
   params,
 }: {
   params: BlogPageParams;
-}): Promise<Metadata | undefined> {
+}): Promise<Metadata> {
   const { slug } = await params;
   const blog = await getBlogBySlug(slug);
   if (!blog) {
-    return;
+    notFound();
   }
 
-  const ogImage = `${siteMetadata.siteUrl}/og?title=${blog.title}`;
+  const ogImageUrl = new URL("/og", siteMetadata.siteUrl);
+  ogImageUrl.searchParams.set("title", blog.title);
+  const ogImage = ogImageUrl.toString();
 
   return {
     title: blog.title,
@@ -63,7 +65,7 @@ export default async function Blog({ params }: { params: BlogPageParams }) {
   const blog = await getBlogBySlug(slug);
 
   if (!blog) {
-    return <NotFound />;
+    notFound();
   }
 
   return (

@@ -48,7 +48,7 @@ function QuestionItem({
 }
 
 export default function Questions() {
-  const reduce = useReducedMotion?.() ?? false;
+  const reduce = useReducedMotion() ?? false;
   const ease = [0.22, 0.61, 0.36, 1] as const;
 
   const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 18 };

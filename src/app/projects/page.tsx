@@ -1,6 +1,5 @@
 import { generatePageMetadata } from "../seo";
 import { AnimatedProjectsList } from "../../components/animated-projects-list";
-import React from "react";
 import { WEB_APPS, TOOLS } from "@/data/projects";
 import { Separator } from "@/components/ui/separator";
 

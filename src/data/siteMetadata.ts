@@ -2,7 +2,12 @@ export const siteMetadata = {
   title: "Eric Zhong",
   author: "Eric Zhong",
   siteUrl: "https://erictzhong.com",
-  socialBanner: "/_static/default-og-card.png",
+  socialBanner: {
+    url: "/_static/eric-zhong-og.png",
+    width: 1200,
+    height: 630,
+    alt: "Eric Zhong — chip design and low-level systems",
+  },
   description: [
     "I'm an engineer and developer based in San Francisco—specializing in chip",
     "design and low-level systems. I'm passionate about all things hardware and",

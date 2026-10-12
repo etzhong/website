@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
   CURRENTLY_READING,
   PLAN_TO_READ,
@@ -10,7 +9,7 @@ import { AnimatedBookGrid } from "@/components/animated-book-grid";
 import { motion, useReducedMotion } from "framer-motion";
 
 export default function Bookshelf() {
-  const reduce = useReducedMotion?.() ?? false;
+  const reduce = useReducedMotion() ?? false;
   const ease = [0.22, 0.61, 0.36, 1] as const;
 
   const blockHidden = reduce ? { opacity: 0 } : { opacity: 0, y: 18 };

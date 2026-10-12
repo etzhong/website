@@ -6,12 +6,7 @@ export default [
   ...nextTypescript,
   {
     rules: {
-      "@typescript-eslint/ban-ts-comment": "off",
-      "@typescript-eslint/no-empty-object-type": "off",
-      "@typescript-eslint/no-explicit-any": "off",
       "import/no-anonymous-default-export": "off",
-      "react-hooks/set-state-in-effect": "off",
-      "react-hooks/static-components": "off",
     },
   },
   {

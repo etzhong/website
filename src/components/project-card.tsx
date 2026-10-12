@@ -77,10 +77,10 @@ export const ProjectCard = ({ project, index }: Props) => {
                 Code
               </a>
             </Button>
-            {(project as any).demo && (
+            {"demo" in project && project.demo && (
               <Button size="sm" asChild className="transition-colors">
                 <a
-                  href={(project as any).demo}
+                  href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

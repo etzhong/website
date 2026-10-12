@@ -78,8 +78,12 @@ export default function RootLayout({
             <Footer />
           </main>
         </ThemeProvider>
-        <GoogleAnalytics gaId={ENV.GOOGLE_ANALYTICS_ID} />
-        <GoogleAdsense pId={ENV.ADSENSE_CLIENT_ID} />
+        {ENV.GOOGLE_ANALYTICS_ID && (
+          <GoogleAnalytics gaId={ENV.GOOGLE_ANALYTICS_ID} />
+        )}
+        {ENV.ADSENSE_CLIENT_ID && (
+          <GoogleAdsense pId={ENV.ADSENSE_CLIENT_ID} />
+        )}
         <Analytics />
       </body>
     </html>

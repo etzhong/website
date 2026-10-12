@@ -1,12 +1,14 @@
 import { siteMetadata } from "@/data/siteMetadata";
 import { Metadata } from "next";
 
-interface OwnProps {
+type OwnProps = Omit<
+  Metadata,
+  "title" | "description" | "openGraph" | "twitter"
+> & {
   title: string;
   description?: string;
   image?: string;
-  [key: string]: any;
-}
+};
 
 export function generatePageMetadata({
   title,
@@ -16,6 +18,7 @@ export function generatePageMetadata({
 }: OwnProps): Metadata {
   return {
     title,
+    description: description || siteMetadata.description,
     openGraph: {
       title: `${title} | ${siteMetadata.title}`,
       description: description || siteMetadata.description,
