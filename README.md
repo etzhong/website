@@ -9,30 +9,25 @@ This is my personal website, blog, and portfolio built using:
 
 Original inspiration + template credit to [Adarsha Acharya](https://github.com/adarshaacharya)
 
-Use Node.js 22.21 or newer within Node 22 and the pnpm version specified in
-`package.json`. The `engines.node` setting also selects Node 22 on Vercel.
-`.npmrc` sets the Node baseline used for package compatibility checks, including
-when pnpm runs as a standalone binary.
+## Quick start
+
+Use Node.js 22.21+ (22.x) and pnpm 8.11.0.
 
 ```sh
 pnpm install --frozen-lockfile
+```
+
+For a quick development preview:
+
+```sh
 pnpm dev
 ```
 
-Before deploying, run `pnpm lint`, `pnpm type-check`, and `pnpm build`.
-Builds need development dependencies, including TypeScript and Tailwind CSS.
+To build and view the production version locally:
 
-For Vercel, use the Next.js framework preset, `pnpm build`, and the default
-dependency installation and output directory. Optional Google Analytics and
-AdSense scripts are enabled only when `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` and
-`NEXT_PUBLIC_ADSENSE_CLIENT_ID`, respectively, are configured before the build.
+```sh
+pnpm build
+pnpm start
+```
 
-The social preview is a static image. After changing its text, portrait, or styling,
-run `pnpm generate:og` and include the updated `public/_static/eric-zhong-og.png`
-in the deployment.
-
-The dependency audit was checked on October 12, 2026. Three upstream findings
-remain: `braces` in ESLint's glob tooling and `sprintf-js` in an unused YAML CLI
-have no patched releases; Tailwind's typography plugin pins an older
-`postcss-selector-parser` major. Recheck with `pnpm audit` when updating these
-packages rather than forcing incompatible dependency overrides.
+Open [localhost:3000](http://localhost:3000) to view the site.
