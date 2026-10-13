@@ -78,7 +78,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}>
             I&apos;m an engineer and developer based in San Francisco&mdash;specializing in chip
             design and low-level systems. I&apos;m passionate about all things hardware and
-            software (especially when put together) and enjoy working on optimized
+            software (especially where they intersect) and enjoy building optimized
             systems designed from first principles. Currently I work as a GPU Architect at{" "}
             <a href="https://www.nvidia.com/en-us" target="_blank" className="border-b inline-block">
               NVIDIA
